@@ -14,5 +14,7 @@ int main(){
 	// `*` is a dereference operator on a pointer, it gets the value stored at the memory address the pointer is pointing to
 	printf("Value of x using pointer y: %c \n", *y);
 	printf("Address of x using pointer y: %p \n", y);
+	printf("Address of y: %p \n", &y);
+	
 	return 0;
 }
