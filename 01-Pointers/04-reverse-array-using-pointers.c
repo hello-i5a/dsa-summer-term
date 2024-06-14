@@ -10,7 +10,7 @@ void displayArray(int arr[], int length);
 void reverseArray(int arr[], int length);
 
 int main(){
-	int intArray[MAX] = {2, 4, 6, 8, 10};
+	int intArray[MAX] = {10, 6, 2, 8, 4};
 	int n = MAX;
 	
 	printf("Before reversing: \n");
@@ -32,15 +32,15 @@ void displayArray(int arr[], int length){
 }
 
 void reverseArray(int arr[], int length){
-	int tempArray[MAX];
-	int n, i, j;
+	int *start = arr; // Address of the first index i.e. index 0
+	int *end = arr + (length - 1); // Address of the last index i.e. index 4
+	int temp;
 	
-	// Copy the values of arr to tempArray
-	for(n = 0; n < length; n++){
-		tempArray[n] = arr[n];
-	}
-	
-	for(j = (length-1), i = 0; j >= 0 && i < length; j--, i++){
-		arr[j] = tempArray[i];
+	// Since it is an array, the address is contiguous in the memory so it is increasing
+	// Hence the condition `start <= end`
+	for(; start <= end; start++, end--){
+		temp = *start;
+		*start = *end;
+		*end = temp;
 	}
 }
