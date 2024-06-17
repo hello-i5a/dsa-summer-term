@@ -34,8 +34,9 @@ void removeDuplicates(int arr[], int *size){
 	for(n = 0, m = n+1; n < *size; ){
 		if(arr[n] == arr[m]){
 			arr[m] = arr[m+1];
-			(*size)--;
+			m++;
 		}
 		n++;
 	}
+	(*size)--;
 }
