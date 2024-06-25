@@ -11,6 +11,7 @@ typedef struct node{
 void display(LIST L);
 void insertBeginning(LIST *L, char x[]);
 void insertEnd(LIST *L, char x[]);
+void insertAtMiddle(LIST *L, char x[], int pos);
 
 int main() {
     // Head pointer
@@ -34,6 +35,12 @@ int main() {
     display(head);
     
     insertEnd(&head, "Fernando Alonso");
+    display(head);
+    
+    insertAtMiddle(&head, "Sergio Perez", 2);
+    display(head);
+    
+    insertAtMiddle(&head, "Oscar Piastri", 4);
     display(head);
 
     return 0;
@@ -70,5 +77,20 @@ void insertEnd(LIST *L, char x[]){
     LIST *trav = L;
     for(; *trav != NULL; trav = &(**trav).next){
     }
+    *trav = node;
+}
+
+void insertAtMiddle(LIST *L, char x[], int pos){
+    // First node is at index 0
+    LIST node = (LIST) calloc(1, sizeof(struct node));
+    strcpy((*node).name, x);
+    
+    LIST *trav = L;
+    int count = 0;
+    for(; count < pos && *trav != NULL ; trav = &(**trav).next){
+        count++;
+    }
+    LIST temp = *trav;
+    (*node).next = temp;
     *trav = node;
 }
