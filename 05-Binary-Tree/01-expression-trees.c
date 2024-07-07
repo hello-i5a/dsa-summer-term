@@ -3,6 +3,19 @@ Expression Trees: a binary tree where the internal node represents an operator a
 
 Traversal:
 Inorder: Similar to infix notation.
-Postoder: Similar to postorder notation (a.k.a. reverse Polish notation).
+Postorder: Similar to postorder notation (a.k.a. reverse Polish notation).
 Preorder: Similar to preorder notation (a.k.a. Polish notation).
+
+Rules in Postorder Traversal:
+1. From the center of each node, draw a line to the right.
+2. Starting from the root node, traverse the outline of the tree in a counterclockwise direction.
+If you hit a line, write the content of the node.
+
+Rules in Preorder Traversal:
+1. From the center of each node, draw a line to the left.
+2. Starting from the root node, traverse the outline of the tree in a counterclockwise direction.
+If you hit a line, write the content of the node.
+
+Tips in Traversal:
+1. You are doing it correctly if the operands are in the same order.
 */
