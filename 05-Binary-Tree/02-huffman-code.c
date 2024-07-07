@@ -7,4 +7,12 @@ Tip: Always arrange in descending order.
 4. Create a code table:
         Least frequent is 0.
         Most frequent is 1.
+
+Resources:
+Huffman Tree Generator:
+https://www.csfieldguide.org.nz/en/interactives/huffman-tree/
+
+Huffman Coding Generator:
+https://asecuritysite.com/calculators/huff
+https://www.dcode.fr/huffman-tree-compression
 */
