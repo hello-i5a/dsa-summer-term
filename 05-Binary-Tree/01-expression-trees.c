@@ -6,6 +6,13 @@ Inorder: Similar to infix notation.
 Postorder: Similar to postorder notation (a.k.a. reverse Polish notation).
 Preorder: Similar to preorder notation (a.k.a. Polish notation).
 
+Operator Priority/Precedence:
+                ^       -> 5
+                * / ~   -> 4
+                + -     -> 3
+                ( )     -> 2
+                =       -> 1
+
 Rules in Postorder Traversal:
 1. From the center of each node, draw a line to the right.
 2. Starting from the root node, traverse the outline of the tree in a counterclockwise direction.
