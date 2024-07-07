@@ -6,7 +6,6 @@
 Operand: numbers/letters/variables
 Operators: symbols (PEMDAS)
                     Priority
-                    ( )   -> 4
                     ^     -> 3
                     * /   -> 2
                     + -   -> 1
