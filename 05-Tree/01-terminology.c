@@ -13,8 +13,11 @@ Leaf node: A node with no children.
     Also called as External node.
 Internal node: A node with at least one child. This includes the root node.
 Degree: The number of edges connected to a node or the number of children a node has.
-Level of a tree: The step from top of the three to the bottom.
+Level: The distance from the root.
     Root = Level 0
+    Children = Level 1
+    Their children = Level 2 and so on.
+    Also called as Breadth.
 Height of a node: The number of edges in the longest path, starting from the leaf node to a particular node.
     Height of leaf node = 0
 Depth of a node: The number of edges in the longest path, starting from the root to a particular node.
