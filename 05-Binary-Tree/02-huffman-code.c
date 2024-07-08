@@ -1,4 +1,7 @@
 /*
+Huffman code: a binary tree. It is a method of lossless data compression that uses variable-length codes to represent characters or symbols. 
+                It assigns shorter codes to more frequently occurring characters, optimizing the efficiency of the encoding process.
+
 1. Count the frequency for each character.
 2. List out from the most frequent to the least frequent.
 3. Add the occurrences/frequency of the list frequent first.
