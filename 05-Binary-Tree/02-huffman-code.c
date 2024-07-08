@@ -7,6 +7,7 @@ Tip: Always arrange in descending order.
 4. Create a code table:
         Least frequent is 0.
         Most frequent is 1.
+        If similar frequency, left node is 0 and right node is 1.
 
 Resources:
 Huffman Tree Generator:
