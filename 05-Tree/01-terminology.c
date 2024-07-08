@@ -25,4 +25,21 @@ Depth of a node: The number of edges in the longest path, starting from the root
 Path: Refers to the sequence of nodes and edges between two nodes.
     Length of the path = number of nodes in the path
 Subtree: A child node with at least two child nodes. A leaf node is not a subtree.
+
+Binary Tree vs Binary Search Tree (BST) vs AVL Tree
+Binary tree: A parent node has at most 2 children: left node and right node.
+Binary search tree: A specific type of binary tree where nodes are ordered in a certain manner.
+    left node < parent < right node
+    The left node/left subtree: lesser values
+    The right node/right subtree: greater values
+    Combines the advantages of arrays and linked lists:
+        Array
+        (+): search on sorted array   = O(log (n))
+        (-): insertion and deletion   = O(n)
+        Linked list
+        (-): search                   = O(n)
+        (+): insertion and deletion   = O(1)
+    BST is sorted/ordered and the insertion and deletion is efficient (if it is in linked list implementation).
+AVL tree: A self-balancing BST. It is named after named after inventors Adelson-Velsky and Landis.
+    Search, insertion and deletion    = O(log2 (n))
 */
