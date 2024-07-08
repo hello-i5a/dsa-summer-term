@@ -7,7 +7,7 @@ Tree: non-linear data structure that is (1) hierarchical in nature and (2) uses 
 Root: Topmost node of the tree.
 Edge: The connecting link between two nodes.
 Parent node: A node with children. This includes the root node.
-Child node: A descendant of a node. In a root, all nodes are child nodes except for the root.
+Child node: A descendant of a node. In a tree, all nodes are child nodes except for the root.
 Siblings: Child nodes sharing the same parent node.
 Leaf node: A node with no children.
     Also called as External node.
