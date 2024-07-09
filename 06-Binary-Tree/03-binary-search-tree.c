@@ -9,6 +9,7 @@ Case 3: Delete a node with both children
 	Resulting tree follows the BST property.
 	Find the inorder successor of the node.
 Case 4: Delete the root
+https://www.youtube.com/watch?v=DkOswl0k7s4
 
 Search in BST
 1. Think of BST as a sorted array.
