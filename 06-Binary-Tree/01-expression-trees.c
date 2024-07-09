@@ -23,6 +23,11 @@ Rules in Preorder Traversal:
 2. Starting from the root node, traverse the outline of the tree in a counterclockwise direction.
 If you hit a line, write the content of the node.
 
+Rules in Inorder Traversal:
+1. From the center of each node, draw a line going down.
+2. Starting from the root node, traverse the outline of the tree in a counterclockwise direction.
+If you hit a line, write the content of the node.
+
 Tips in Traversal:
 1. You are doing it correctly if the operands are in the same order.
 
