@@ -1,4 +1,11 @@
 /*
+Search in BST
+1. BST is a sorted array.
+2. Perform Binary Search algorithm.
+	If it is lesser, go to the left subtree.
+	If it is lesser, go to the right subtree.
+3. Return True if found, else False.
+
 Insertion in BST
 1. Maintain the BST property.
 
@@ -10,11 +17,6 @@ Case 3: Delete a node with both children
 	Find the inorder successor of the node.
 Case 4: Delete the root
 https://www.youtube.com/watch?v=DkOswl0k7s4
-
-Search in BST
-1. Think of BST as a sorted array.
-2. Perform Binary Search algorithm.
-3. Return True if found, else False.
 
 BST Simulator:
 https://www.cs.usfca.edu/~galles/visualization/BST.html
