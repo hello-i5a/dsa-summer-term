@@ -33,8 +33,8 @@ Binary search tree: A specific type of binary tree where nodes are ordered in a 
     The left node/left subtree: lesser values
     The right node/right subtree: greater values
     Combines the advantages of arrays and linked lists:
-        Array
-        (+): search on sorted array   = O(log (n))
+        Array (sorted)
+        (+): search                   = O(log (n))
         (-): insertion and deletion   = O(n)
         Linked list
         (-): search                   = O(n)
