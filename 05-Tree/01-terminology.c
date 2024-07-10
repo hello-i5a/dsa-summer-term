@@ -44,6 +44,10 @@ AVL tree: A self-balancing BST, named after named after inventors Adelson-Velsky
     Search, insertion and deletion    = O(log2 (n))
     The mechanism is to ensure that operations remain efficient i.e. O(log2 (n)) even after successive insertions versus an ordinary BST with O(n) for search.
 
+Traversal:
+Breadth First Search (BFS)
+Depth First Search (DFS)
+
 Slides:
 https://cs.slides.com/colt_steele/trees
 */
