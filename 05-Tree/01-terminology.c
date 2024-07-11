@@ -42,7 +42,7 @@ Binary search tree: A specific type of binary tree where nodes are ordered in a 
     BST is sorted/ordered and the insertion and deletion is efficient (if it is in linked list implementation).
 AVL tree: A self-balancing BST, named after named after inventors Adelson-Velsky and Landis.
     Search, insertion and deletion    = O(log2 (n))
-    The mechanism is to ensure that operations remain efficient i.e. O(log2 (n)) even after successive insertions versus an ordinary BST with O(n) for search.
+    The mechanism is to ensure that operations remain efficient i.e. O(log2 (n)) even after successive insertions and deletions versus an ordinary BST with O(n) for search.
 
 Traversal:
 Breadth First Search (BFS)
