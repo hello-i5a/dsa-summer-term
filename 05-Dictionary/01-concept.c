@@ -8,6 +8,7 @@ Two types of Dictionary:
     Double Hashing
 
 Terms:
+Hashing
 Collision
 Packing Density
 */
