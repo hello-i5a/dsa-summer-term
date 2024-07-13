@@ -29,12 +29,12 @@ Three Types of Graphs
 3. Weighted Graph: A graph where edges have weights associated with them.
 
 Implementation
-1. Adjacency List: Utilizes row and column (2D array). Suits dense graph (a.k.a. lots of edges) or when edge lookup is required.
+1. Adjacency Matrix: Utilizes row and column (2D array). Suits dense graph (a.k.a. lots of edges) or when edge lookup is required.
                     Representation:     1  (or weight) if an edge exists, else 0.
                     Size:               V * V, where V is the number of vertices
                     Time complexity:    O(1)
                     Space complexity:   O(V^2)
-2. Adjacency Matrix: Similar to an open dictionary i.e. separate chaining (linked list). Suits sparse graph or memory efficiency is a must.
+2. Adjacency List: Similar to an open dictionary i.e. separate chaining (linked list). Suits sparse graph or memory efficiency is a must.
                     Time complexity:    O(V)
                     Space complexity:   O(V + E), where E is the number of edges
 
