@@ -18,5 +18,9 @@ int main()
     printf("Address of multi[0]: %u\n", multi[0]); // Pointer
     printf("Address of multi[0][0]: %u\n", &multi[0][0]);
 
+    printf("Size of multi: %u\n", sizeof(multi));       // Pointer
+    printf("Size of multi[0]: %u\n", sizeof(multi[0])); // Pointer
+    printf("Size of multi[0][0]: %u\n", sizeof(multi[0][0]));
+
     return 0;
 }
