@@ -1,8 +1,8 @@
 #include <stdio.h>
 #define SIZE 5
 
-// 5 nodes
-// 8 edges
+// Nodes = 5
+// Edges = 8
 
 typedef enum
 {
