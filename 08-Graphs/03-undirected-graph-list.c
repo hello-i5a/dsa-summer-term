@@ -13,7 +13,8 @@ typedef struct node
 
 typedef struct list
 {
-    NODE arr[SIZE]; // Array of pointers
+    NODE arr[SIZE]; // Array of NODE pointers
+                    // Points to the head of linked list of edges
     int count;      // Number of nodes
 } LIST;
 
