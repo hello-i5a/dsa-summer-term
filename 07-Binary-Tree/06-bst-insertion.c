@@ -4,15 +4,12 @@
 typedef struct node
 {
     int elem;
-    struct node *left;
-    struct node *right;
+    struct node *left, *right;
 } *NODE;
 
-void preorder(NODE T);
-void postorder(NODE T);
-void inorder(NODE T);
+void inorder(NODE R);
 NODE createNode(int x);
-void insert(NODE *T, int x);
+void insert(NODE *R, int x);
 
 int main()
 {
@@ -21,80 +18,50 @@ int main()
     insert(&root, 55);
     insert(&root, 23);
     insert(&root, 89);
-    insert(&root, 14);
     insert(&root, 27);
-    insert(&root, 89);
+    insert(&root, 14);
+    insert(&root, 3);
+    insert(&root, 71);
     insert(&root, 95);
-    insert(&root, 101);
-
-    printf("Preorder traversal:\n");
-    preorder(root);
-    printf("\n");
-
-    printf("Postorder traversal:\n");
-    postorder(root);
-    printf("\n");
 
     printf("Inorder traversal:\n");
     inorder(root);
-    printf("\n");
 
     return 0;
 }
 
-void preorder(NODE T)
+void inorder(NODE R)
 {
-    if (T != NULL)
+    if (R != NULL)
     {
-        printf("%d ", (*T).elem);
-        preorder((*T).left);
-        preorder((*T).right);
-    }
-}
-
-void postorder(NODE T)
-{
-    if (T != NULL)
-    {
-        postorder((*T).left);
-        postorder((*T).right);
-        printf("%d ", (*T).elem);
-    }
-}
-
-void inorder(NODE T)
-{
-    if (T != NULL)
-    {
-        inorder((*T).left);
-        printf("%d ", (*T).elem);
-        inorder((*T).right);
+        inorder((*R).left);
+        printf("%d ", (*R).elem);
+        inorder((*R).right);
     }
 }
 
 NODE createNode(int x)
 {
-    NODE new = calloc(1, sizeof(struct node));
-    (*new).elem = x;
-
-    return new;
+    NODE n = calloc(1, sizeof(struct node));
+    (*n).elem = x;
 }
 
-void insert(NODE *T, int x)
+void insert(NODE *R, int x)
 {
-    // Create new node
-    NODE newNode = createNode(x);
+    // Case 1: Recurse down left subtree (< case)
+    // Case 2: Recurse down right subtree (> case)
+    // Case 3: Create a new node (found a NULL leaf) (Base Case)
 
-    if (*T == NULL)
+    if (*R == NULL)
     {
-        *T = newNode; // root
+        *R = createNode(x);
     }
-    else if ((*newNode).elem < (**T).elem)
+    else if (x < (**R).elem)
     {
-        (**T).left = newNode;
+        insert(&(**R).left, x);
     }
-    else
+    else if (x > (**R).elem)
     {
-        (**T).right = newNode;
+        insert(&(**R).right, x);
     }
 }
