@@ -9,7 +9,7 @@ typedef struct node
 
 void inorder(NODE R);
 NODE createNode(int x);
-void insert(NODE *R, int x);
+void insert(NODE *R, int x); // Used commonly with BST as values are in descending order
 
 int main()
 {
