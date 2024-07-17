@@ -25,6 +25,7 @@ int main()
     insert(&root, 3);
     insert(&root, 71);
     insert(&root, 95);
+    insert(&root, 14);
 
     printf("Inorder traversal: ");
     inorder(root);
@@ -81,6 +82,7 @@ void insert(NODE *R, int x)
     // Case 1: Recurse left subtree (< case)
     // Case 2: Recurse right subtree (> case)
     // Case 3: Found a NULL leaf case = create new node (Base case)
+    // Optional Case: Handle duplicate value (= case)
 
     if (*R == NULL)
     {
@@ -93,5 +95,15 @@ void insert(NODE *R, int x)
     else if (x > (**R).elem)
     {
         insert(&(**R).right, x); // Traverse to the right subtree
+    }
+    else if (x == (**R).elem)
+    {
+        // Option 1: Do nothing (ignore duplicates)
+
+        // Option 2: Replace the existing node
+        // (*R)->elem = x;
+
+        // Option 3: Insert into the right (or left) subtree
+        insert(&(**R).right, x);
     }
 }
