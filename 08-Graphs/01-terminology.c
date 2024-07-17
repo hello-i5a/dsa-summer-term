@@ -39,6 +39,7 @@ Implementation
                     Space complexity:   O(V + E), where E is the number of edges
 
 Traversal
-1. Depth-First Search (DFS)
-2. Breadth-First Search (BFS)
+1. Depth-First Search (DFS): Explore one branch as far as possible before backtracking.
+                                Remember: Keep in mind the conditions because the algorithm follows it.
+2. Breadth-First Search (BFS): Visit the neighbors/siblings at the same level/breadth.
 */
