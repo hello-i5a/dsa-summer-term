@@ -7,9 +7,11 @@ typedef struct node
     struct node *left, *right;
 } *NODE;
 
-void inorder(NODE R);
+void inorder(NODE R); // Used commonly with BST as values are in ascending order
+void preoder(NODE R);
+void postorder(NODE R);
 NODE createNode(int x);
-void insert(NODE *R, int x); // Used commonly with BST as values are in ascending order
+void insert(NODE *R, int x); // Pointer to pointer
 
 int main()
 {
@@ -24,8 +26,14 @@ int main()
     insert(&root, 71);
     insert(&root, 95);
 
-    printf("Inorder traversal:\n");
+    printf("Inorder traversal: ");
     inorder(root);
+
+    printf("\nPreorder traversal: ");
+    preoder(root);
+
+    printf("\nPostorder traversal: ");
+    postorder(root);
 
     return 0;
 }
@@ -34,23 +42,45 @@ void inorder(NODE R)
 {
     if (R != NULL)
     {
-        inorder((*R).left);
+        inorder((*R).left);  // Traverse to the left subtree
+        inorder((*R).right); // Traverse to the right subtree
         printf("%d ", (*R).elem);
-        inorder((*R).right);
+    }
+}
+
+void preoder(NODE R)
+{
+    if (R != NULL)
+    {
+        printf("%d ", (*R).elem);
+        preoder((*R).left);
+        preoder((*R).right);
+    }
+}
+
+void postorder(NODE R)
+{
+    if (R != NULL)
+    {
+        postorder((*R).left);
+        postorder((*R).right);
+        printf("%d ", (*R).elem);
     }
 }
 
 NODE createNode(int x)
 {
-    NODE n = calloc(1, sizeof(struct node));
-    (*n).elem = x;
+    NODE newNode = calloc(1, sizeof(struct node));
+    (*newNode).elem = x;
+
+    return newNode;
 }
 
 void insert(NODE *R, int x)
 {
-    // Case 1: Recurse down left subtree (< case)
-    // Case 2: Recurse down right subtree (> case)
-    // Case 3: Create a new node (found a NULL leaf) (Base Case)
+    // Case 1: Recurse left subtree (< case)
+    // Case 2: Recurse right subtree (> case)
+    // Case 3: Found a NULL leaf case = create new node (Base case)
 
     if (*R == NULL)
     {
@@ -58,10 +88,10 @@ void insert(NODE *R, int x)
     }
     else if (x < (**R).elem)
     {
-        insert(&(**R).left, x);
+        insert(&(**R).left, x); // Traverse to the left subtree
     }
     else if (x > (**R).elem)
     {
-        insert(&(**R).right, x);
+        insert(&(**R).right, x); // Traverse to the right subtree
     }
 }
