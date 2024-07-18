@@ -44,11 +44,30 @@ Traversal
 2. Breadth-First Search (BFS): Visit the neighbors/siblings at the same level/breadth.
 
 Shortest Path Algorithms
-Dijkstra's Algorithm
-1. Select the node with the smallest known distance to visit first.
-        For instance, given nodes are alphabet. Start with.
-        A to itself hence: distance = 0.
-2. Once you've moved to the node, look at the neighbors. For each neighboring, sum the distance from the starting node.
-3. If the new total distance to a node is less than the previous total, store it in the Visited list.
-4. Continue the process until all nodes are visited.
+Dijkstra's Algorithm: Calculates the shortest path from specific starting node and destination node.
+        Uses adjacency matrix.
+        How it works:
+        1. Select the node with the smallest known distance to visit first.
+                For instance, given nodes are alphabet. Start with.
+                A to itself hence: distance = 0.
+        2. Once you've moved to the node, look at the neighbors. For each neighboring, sum the distance from the starting node.
+        3. If the new total distance to a node is less than the previous total, store it in the Visited list.
+        4. Continue the process until all nodes are visited.
+Floyd-Warshall Algorithm: Calculates the shortest path from all pairs of vertices.
+        Uses adjacency matrix.
+        How it works:
+        1. Initialization
+        2. Iteration: number of nodes = number of iteration
+
+Minimum Spanning Tree Algorithms (for weighted undirected graph)
+Prim's Algorithm
+        How it works:
+        1. Start with an arbitrary vertex and grow the minimum spanning tree one edge at a time.
+        2. At each step, select the edge with the smallest weight that connects a vertex, ensure no cycles are formed.
+        2. Continue until all vertices are included in the tree.
+Kruskal's Algorithm
+        How it works:
+        1. Sorting all the edges in the graph by their weights (in ascending order).
+        2. Add them to the minimum spanning tree one by one in increasing order of weight, as long as adding the edge does not form a cycle.
+        3. Each node visited is stored in the Visited list.
 */
