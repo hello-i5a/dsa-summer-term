@@ -34,7 +34,7 @@ Implementation
                     Size:               V * V, where V is the number of vertices
                     Time complexity:    O(1)
                     Space complexity:   O(V^2)
-2. Adjacency List: Similar to an open dictionary i.e. separate chaining (linked list). Suits sparse graph or memory efficiency is a must.
+2. Adjacency List: Similar to an open dictionary i.e. separate chaining (i.e. linked list implementation). Suits sparse graph or memory efficiency is a must.
                     Time complexity:    O(V)
                     Space complexity:   O(V + E), where E is the number of edges
 
