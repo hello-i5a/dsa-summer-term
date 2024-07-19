@@ -67,7 +67,7 @@ Prim's Algorithm
         2. Continue until all vertices are included in the tree.
 Kruskal's Algorithm
         How it works:
-        1. Sorting all the edges in the graph by their weights (in ascending order).
+        1. Sort all the edges in the graph by their weights (in ascending order).
         2. Add them to the minimum spanning tree one by one in increasing order of weight, as long as adding the edge does not form a cycle.
         3. Each node visited is stored in the Visited list.
 */
